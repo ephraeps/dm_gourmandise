@@ -6,7 +6,7 @@
 
 .menu{
     display: flex;
-    width: 520px;
+    width: 560px;
     height: 680px;
     justify-content: center;
 }
@@ -96,4 +96,6 @@ h1{
 .order:hover{
     background-color: chocolate;
     border-radius: 20px;
+    
+    
 }
