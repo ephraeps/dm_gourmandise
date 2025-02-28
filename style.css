@@ -130,3 +130,9 @@ h1{
     border-radius: 20px;
     margin: 10px;
 }
+.offres{
+    display: grid;
+    margin-top: 60px;
+    margin-bottom: 55px;
+    
+}
