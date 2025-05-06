@@ -180,32 +180,80 @@ h1{
     margin-bottom: 55px;
     
 }
+
+/* Media Queries pour les smartphones */
 @media only screen and (max-width: 768px) {
-    /* Ajustement spécifique pour les images du menu */
-    .vitrine1 img, 
-    .vitrine2 img {
-        width: 150px; /* Taille réduite pour mobile */
-        height: auto; /* Maintient les proportions */
-        margin: 0 auto 15px; /* Centrage et marge basse */
-        display: block; /* Pour mieux contrôler l'affichage */
+    menu {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
     }
-
-
-
-    /* Ajustement de la grille pour mobile */
+    
+    header {
+        margin-bottom: 20px;
+    }
+    
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        padding-left: 5px;
+    }
+    
     .vitrine {
         grid-template-columns: 1fr;
-        justify-items: center; /* Centre les éléments horizontalement */
+        padding: 10px;
+        gap: 15px;
     }
-
-    /* Réduction des marges pour gagner de l'espace */
-    .tmenu {
-        margin-bottom: 10px;
-    }
-
-    .menu{
-        max-width: 100%;
+    
+    .vitrine1 img, .vitrine2 img {
+        width: 100%;
         height: auto;
-        max-height: 200px; /* Hauteur maximale pour mobile */
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .decor1 {
+        padding-left: 0;
+        justify-content: center;
+    }
+    
+    .promotion {
+        margin: 15px;
+        border-width: 3px;
+    }
+    
+    .order, .about {
+        margin: 15px 5px;
+    }
+    
+    .offres {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    /* Ajustements typographiques */
+    strong {
+        font-size: 16px;
+    }
+    
+    /* Optimisation pour le tactile */
+    a, button {
+        min-height: 48px; /* Taille minimale recommandée pour les zones tactiles */
+    }
+}
+
+/* Pour les très petits écrans (moins de 400px) */
+@media only screen and (max-width: 400px) {
+    .tpromo, .tabout, .torder {
+        font-size: 0.9rem;
+    }
+    
+    .promotion {
+        margin: 10px 5px;
     }
 }
