@@ -52,6 +52,7 @@ body.loaded .content {
     width: 560px;
     height: 680px;
     justify-content: center;
+    object-fit: cover;
 }
 body{
     background-color: #663109;
@@ -178,4 +179,33 @@ h1{
     margin-top: 60px;
     margin-bottom: 55px;
     
+}
+@media only screen and (max-width: 768px) {
+    /* Ajustement spécifique pour les images du menu */
+    .vitrine1 img, 
+    .vitrine2 img {
+        width: 150px; /* Taille réduite pour mobile */
+        height: auto; /* Maintient les proportions */
+        margin: 0 auto 15px; /* Centrage et marge basse */
+        display: block; /* Pour mieux contrôler l'affichage */
+    }
+
+
+
+    /* Ajustement de la grille pour mobile */
+    .vitrine {
+        grid-template-columns: 1fr;
+        justify-items: center; /* Centre les éléments horizontalement */
+    }
+
+    /* Réduction des marges pour gagner de l'espace */
+    .tmenu {
+        margin-bottom: 10px;
+    }
+
+    .menu{
+        max-width: 100%;
+        height: auto;
+        max-height: 200px; /* Hauteur maximale pour mobile */
+    }
 }
