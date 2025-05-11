@@ -49,8 +49,8 @@ body.loaded .content {
 
 .menu{
     display: flex;
-    width: 560px;
-    height: 680px;
+    max-width: 560px;
+    max-height: 680px;
     justify-content: center;
     object-fit: cover;
 }
@@ -194,7 +194,7 @@ h1{
 /* Media Queries pour les smartphones */
 @media only screen and (max-width: 768px) {
     menu {
-        width: 100%;
+        width: 430px;
         height: auto;
         flex-direction: column;
         padding: 10px;
@@ -253,7 +253,7 @@ h1{
     
     /* Optimisation pour le tactile */
     a, button {
-        min-height: 48px; 
+        min-height: 48px; /* Taille minimale recommandée pour les zones tactiles */
     }
 }
 
