@@ -1,134 +1,147 @@
-*{
+* {
     margin: 0 auto;
     color: white;
-    
 }
 
-.loader{
-
+.loader {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: #663109; /* Fond noir */
+    background: #663109;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
-    animation: fadeOut 3s ease-in-out forwards; /* Animation pour disparaître */
-
+    animation: fadeOut 3s ease-in-out forwards;
 }
 
 .loader img {
-
     width: 150px;
-    animation: zoomOut 5s ease-in-out ;
+    animation: zoomOut 5s ease-in-out;
 }
-/* --- Animation pour agrandir et réduire le logo --- */
+
 @keyframes zoomOut {
     0% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.5); opacity: 0.8; }
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* --- Animation pour masquer le loader --- */
 @keyframes fadeOut {
     0% { opacity: 1; }
     100% { opacity: 0; visibility: hidden; }
 }
 
-/* --- Masquer le contenu pendant le chargement --- */
 .content {
     display: none;
 }
 
-/* --- Afficher le contenu après la disparition du loader --- */
 body.loaded .content {
     display: block;
 }
 
-
-.menu{
+/* Menu principal - Version desktop */
+.menu {
     display: flex;
-    width: 560px;
-    height: 560px;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
     justify-content: center;
+    align-items: center;
     object-fit: cover;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
-body{
+
+.menu img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
     background-color: #663109;
 }
-header{
+
+header {
     display: flex;
     justify-content: center;
     margin-bottom: 55px;
     margin-top: 10px;
 }
 
-.thome{
+.thome {
     border-bottom: solid 1px white;
 }
-.tmenu{
+
+.tmenu {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 19px;
 }
-strong{
+
+strong {
     display: flex;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
 }
-.logo{
+
+.logo {
     display: flex;
     justify-content: center;
     width: 10px;
     height: 100px;
     margin-top: 0%;
     margin-bottom: 0%;
-
 }
-h1{
+
+h1 {
     display: flex;
     margin-top: 0px;
     padding-left: 10px;
 }
+
 .vitrine {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px; 
-    justify-items: center; 
+    gap: 30px;
+    justify-content: space-between;
+    justify-items: center;
     padding: 20px;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .vitrine1 {
     display: flex;
-    
-    align-items: center; 
-    justify-content: space-between; 
-    width: 100%; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     height: 100%;
     padding: 15px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    gap: 20px;
 }
 
 .vitrine1 img {
-    width: 100%; 
-    max-width: 250px; 
-    height: 200px; 
-    object-fit: cover; 
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
-.decor1{
+.decor1 {
     display: flex;
-    padding-left: 250px;
+    justify-content: center;
+    padding-left: 0;
 }
-.promotion{
+
+.promotion {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -137,46 +150,48 @@ h1{
     border: solid 6px yellow;
     border-radius: 20px;
 }
-.tpromo{
+
+.tpromo {
     padding-bottom: 5px;
     margin-bottom: 15px;
-    border-bottom: solid 2px wheat ;
+    border-bottom: solid 2px wheat;
     color: wheat;
 }
 
-.socials{
+.socials {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.order{
+
+.order {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 15px;
 }
-.torder{
+
+.torder {
     border-bottom: solid 1px white;
     padding-bottom: 5px;
     margin-bottom: 9px;
 }
-.order:hover{
+
+.order:hover {
     background-color: chocolate;
     border-radius: 20px;
-      
 }
-.about{
+
+.about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 29px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    
 }
 
-.tabout{
+.tabout {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,86 +199,87 @@ h1{
     border-radius: 20px;
     margin: 10px;
 }
-.offres{
+
+.offres {
     display: grid;
     margin-top: 60px;
     margin-bottom: 55px;
-    
 }
 
-/* Media Queries pour les smartphones */
+/* ==================== VERSION MOBILE ==================== */
 @media only screen and (max-width: 768px) {
-    menu {
-        width: 430px;
-        height: auto;
+    .menu {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
         flex-direction: column;
-        padding: 10px;
     }
-    
+
     header {
         margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .logo {
         width: 80px;
         height: 80px;
     }
-    
+
     h1 {
         font-size: 1.5rem;
         padding-left: 5px;
+        text-align: center;
     }
-    
+
     .vitrine {
         grid-template-columns: 1fr;
         padding: 10px;
         gap: 15px;
     }
-    
-    .vitrine1 img, .vitrine2 img {
-        width: 100%;
-        height: auto;
-        max-width: 250px;
-        margin: 0 auto;
+
+    .vitrine1 img {
+        max-width: 200px;
+        height: 180px;
     }
-    
-    .decor1 {
-        padding-left: 0;
-        justify-content: center;
-    }
-    
+
     .promotion {
-        margin: 15px;
-        border-width: 3px;
+        margin: 20px 10px;
+        border-width: 4px;
     }
-    
+
     .order, .about {
         margin: 15px 5px;
     }
-    
+
     .offres {
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    
-    /* Ajustements typographiques */
+
     strong {
         font-size: 16px;
     }
-    
-    /* Optimisation pour le tactile */
-    a, button {
-        min-height: 48px; /* Taille minimale recommandée pour les zones tactiles */
-    }
 }
 
-/* Pour les très petits écrans (moins de 400px) */
+/* Pour les très petits écrans */
 @media only screen and (max-width: 400px) {
+    .menu {
+        max-width: 250px;
+        padding: 10px;
+    }
+
     .tpromo, .tabout, .torder {
         font-size: 0.9rem;
     }
-    
+
     .promotion {
         margin: 10px 5px;
+        border-width: 3px;
+    }
+
+    .vitrine1 img {
+        max-width: 180px;
+        height: 160px;
     }
 }
