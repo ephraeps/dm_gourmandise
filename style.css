@@ -49,8 +49,8 @@ body.loaded .content {
 
 .menu{
     display: flex;
-    max-width: 560px;
-    max-height: 680px;
+    width: 560px;
+    height: 560px;
     justify-content: center;
     object-fit: cover;
 }
