@@ -1,285 +1,113 @@
-* {
-    margin: 0 auto;
-    color: white;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-.loader {
-    position: fixed;
-    width: 100%;
+.home {
     height: 100vh;
-    background: #663109;
+
+}
+.img_logo {
+    width: 98vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
-    animation: fadeOut 3s ease-in-out forwards;
+    margin-left: 25%;
+}
+.home {
+    background-color: #6b3109;
+}
+.cards img {
+    height: 300px;
+    width: auto;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUp 12.5s ease forwards;
+}
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.loader img {
-    width: 150px;
-    animation: zoomOut 5s ease-in-out;
-}
 
-@keyframes zoomOut {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.5); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
-}
-
-.content {
-    display: none;
-}
-
-body.loaded .content {
-    display: block;
-}
-
-/* Menu principal - Version desktop */
-.menu {
-    display: flex;
-    width: 100%;
-    max-width: 560px;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.menu img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-body {
-    background-color: #663109;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 55px;
-    margin-top: 10px;
-}
-
-.thome {
-    border-bottom: solid 1px white;
-}
-
-.tmenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 19px;
-}
-
-strong {
-    display: flex;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    width: 10px;
-    height: 100px;
-    margin-top: 0%;
-    margin-bottom: 0%;
-}
-
-h1 {
-    display: flex;
-    margin-top: 0px;
-    padding-left: 10px;
-}
-
-.vitrine {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-content: space-between;
-    justify-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.vitrine1 {
+.card1, .card2, .card3, .card4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    box-sizing: border-box;
+    padding: 20px;
     gap: 20px;
+    color: white;
+    height: 100vh;
 }
 
-.vitrine1 img {
-    width: 100%;
-    max-width: 250px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+
+.card1, .card3 {
+    flex-direction: row;
 }
 
-.decor1 {
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
+
+.card2, .card4 {
+    flex-direction: row-reverse;
 }
 
-.promotion {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: solid 6px yellow;
-    border-radius: 20px;
+.card1 img, .card2 img, .card3 img, .card4 img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.tpromo {
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    border-bottom: solid 2px wheat;
-    color: wheat;
+.card1 p, .card2 p, .card3 p, .card4 p {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
-
+.card1{
+    background-color: #bb540f;
+}
+.card2{
+    background-color: #d97704;
+}
+.card3{
+    background-color: #8b430f;
+}
+.card4{
+    background-color: #5e270e;
+}
 .socials {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    background-color: #df8245;
 }
-
-.order {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 15px;
-}
-
-.torder {
-    border-bottom: solid 1px white;
-    padding-bottom: 5px;
-    margin-bottom: 9px;
-}
-
-.order:hover {
-    background-color: chocolate;
-    border-radius: 20px;
-}
-
-.about {
+.whatsapp {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 29px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 10px;
 }
-
-.tabout {
+.instagram {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border: solid 2px orange;
-    border-radius: 20px;
-    margin: 10px;
+    gap: 10px;
+    text-align: center;
 }
 
-.offres {
-    display: grid;
-    margin-top: 60px;
-    margin-bottom: 55px;
-}
-
-/* ==================== VERSION MOBILE ==================== */
-@media only screen and (max-width: 768px) {
-    .menu {
-        width: 100%;
-        max-width: 300px;
-        padding: 15px;
+@media (max-width: 768px) {
+    .card1, .card2, .card3, .card4 {
         flex-direction: column;
-    }
-
-    header {
-        margin-bottom: 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        width: 80px;
-        height: 80px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-        padding-left: 5px;
         text-align: center;
     }
 
-    .vitrine {
-        grid-template-columns: 1fr;
-        padding: 10px;
-        gap: 15px;
+    .card1 img, .card2 img, .card3 img, .card4 img {
+        max-width: 80%;
+        margin-bottom: 20px;
     }
-
-    .vitrine1 img {
-        max-width: 200px;
-        height: 180px;
+    .home {
+        height: auto;
+        padding: 20px;
     }
-
-    .promotion {
-        margin: 20px 10px;
-        border-width: 4px;
-    }
-
-    .order, .about {
-        margin: 15px 5px;
-    }
-
-    .offres {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    strong {
-        font-size: 16px;
-    }
-}
-
-/* Pour les très petits écrans */
-@media only screen and (max-width: 400px) {
-    .menu {
-        max-width: 250px;
-        padding: 10px;
-    }
-
-    .tpromo, .tabout, .torder {
-        font-size: 0.9rem;
-    }
-
-    .promotion {
-        margin: 10px 5px;
-        border-width: 3px;
-    }
-
-    .vitrine1 img {
-        max-width: 180px;
-        height: 160px;
+    .home img {
+        margin: 0;
+        width: 100%;
     }
 }
